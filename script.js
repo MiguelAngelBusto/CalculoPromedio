@@ -108,7 +108,7 @@ function calcular() {
 
     // Calcular SAC APORTES = aporte_estatal * 0.083
     const aporte_estatal = getRawValue(document.getElementById("aporte_estatal").value);
-    const sac_aportes = aporte_estatal * 0.083;
+    const sac_aportes = aporte_estatal * 0.0833;
     document.getElementById("sac_aportes").innerText = sac_aportes.toLocaleString('en-US', {
         style: 'currency',
         currency: 'USD',
