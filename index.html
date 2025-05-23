@@ -1,26 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página Simple</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario de Costos</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Bienvenido a mi página</h1>
-  </header>
-
-  <main>
-    <p>Esta es una página simple con HTML, CSS y JavaScript.</p>
-    <button id="miBoton">Haz clic aquí</button>
-    <p id="mensaje"></p>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Mi Sitio</p>
-  </footer>
-
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <label>SUELDO S/REM.9 - F.931</label>
+        <input type="text" id="sueldo" />
+      </div>
+      <div class="row">
+        <label>C. SOC. S/F.931</label>
+        <input type="text" id="csoc" />
+      </div>
+      <div class="row">
+        <label>SUBTOTAL LABORAL</label>
+        <span id="subtotal_laboral">-</span>
+      </div>
+      <div class="row">
+        <label>SAC PROP (8.33%)</label>
+        <span id="sac_prop">-</span>
+      </div>      
+      <div class="row">
+        <label>COSTO LAB. TOTAL</label>
+        <span id="costo_total">-</span>
+      </div>
+      <div class="row">
+        <label>INCREMENTO (42.5%) para llegar al 100% de costos</label>
+        <span id="incremento">-</span>
+      </div>
+      <div class="row">
+        <label>TOTAL</label>
+        <span id="total">-</span>
+      </div>
+      <div class="row">
+        <label>APORTE ESTATAL</label>
+        <input type="number" id="aporte_estatal" />
+      </div>
+      <div class="row">
+        <label>SAC APORTES</label>
+        <span id="sac_aportes">-</span>
+      </div>
+      <div class="row">
+        <label>TOTAL COSTOS A CONSIDERAR PARA CALCULAR CUOTA S/MECANISMOS PRIVADOS</label>
+        <span id="total_costos">-</span>
+      </div>
+      <div class="row">
+        <label>CANTIDAD DE ALUMNOS S/SIME QUE ABONAN</label>
+        <span id="alumnos">-</span>
+      </div>
+      <div class="row">
+        <label>CUOTA AUTORIZADA S/PARAMETROS DEPGP</label>
+        <input type="number" id="cuota_autorizada" />
+      </div>
+      <div class="row">
+        <label>CUOTA ACTUAL</label>
+        <span id="cuota_actual">-</span>
+      </div>
+      <div class="row">
+        <label>Variación de cuota PROMEDIO. REAL SOBRE/AUTORIZADOS</label>
+        <span id="variacion">-</span>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
