@@ -59,8 +59,14 @@ function formatCurrency(value) {
     const csoc = getRawValue(document.getElementById("csoc").value);
   
     const subtotal = sueldo + csoc;
-  
     document.getElementById("subtotal_laboral").innerText = subtotal.toLocaleString('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+  
+    // Calcular el 8.33% del subtotal
+    const sac_prop = subtotal * 0.0833;
+    document.getElementById("sac_prop").innerText = sac_prop.toLocaleString('en-US', {
       style: 'currency',
       currency: 'USD',
     });
