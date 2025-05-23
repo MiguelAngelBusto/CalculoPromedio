@@ -130,8 +130,20 @@ function calcular() {
     document.getElementById("cuota_autorizada").innerText = cuota_autorizada.toLocaleString('en-US', {
         style: 'currency',
         currency: 'USD',
-      });
-      
+    });
+
+    // Obtener cuota_actual y convertir a número
+    const cuota_actual = getRawValue(document.getElementById("cuota_actual").value);
+
+    // Calcular variación si cuota_actual > 0
+    let variacion = 0;
+    variacion = ((cuota_actual/cuota_autorizada)-1)*100;
+
+    // Mostrar variación con signo y dos decimales
+    document.getElementById("variacion").innerText = cuota_actual > 0
+        ? (variacion >= 0 ? '+' : '') + variacion.toFixed(2) + '%'
+        : '-';  
+
 }
 
 
@@ -140,4 +152,4 @@ function calcular() {
 setupFormattedInput("sueldo");
 setupFormattedInput("csoc");
 setupFormattedInput("aporte_estatal");
-
+setupFormattedInput("cuota_actual");
