@@ -70,6 +70,13 @@ function formatCurrency(value) {
       style: 'currency',
       currency: 'USD',
     });
+
+    // Calcular COSTO LAB. TOTAL = subtotal + sac_prop
+  const costo_total = subtotal + sac_prop;
+  document.getElementById("costo_total").innerText = costo_total.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
   }
   
   // Inicializar inputs con comportamiento especial
