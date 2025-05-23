@@ -6,6 +6,20 @@ function formatCurrency(value) {
         maximumFractionDigits: 2,
     });
 }
+const alumnosInput = document.getElementById("alumnos");
+
+alumnosInput.addEventListener("input", () => {
+    // Aceptar solo números enteros
+    alumnosInput.value = alumnosInput.value.replace(/[^0-9]/g, '');
+    calcular();
+});
+
+alumnosInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        alumnosInput.blur();
+    }
+});
 
 function getRawValue(formattedValue) {
     return parseFloat(formattedValue.replace(/[^0-9.]/g, '')) || 0;
@@ -91,9 +105,39 @@ function calcular() {
         style: 'currency',
         currency: 'USD',
     });
+
+    // Calcular SAC APORTES = aporte_estatal * 0.083
+    const aporte_estatal = getRawValue(document.getElementById("aporte_estatal").value);
+    const sac_aportes = aporte_estatal * 0.083;
+    document.getElementById("sac_aportes").innerText = sac_aportes.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+
+    // Calcular TOTAL COSTOS A CONSIDERAR PARA CALCULAR CUOTA S/MECANISMOS PRIVADOS
+    const total_costos = total - aporte_estatal + sac_aportes;
+    document.getElementById("total_costos").innerText = total_costos.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+
+    // obtener alumnos y total_costos (que ya calculaste antes)
+    const alumnosStr = alumnosInput.value;
+    const alumnos = alumnosStr ? parseInt(alumnosStr, 10) : 0;
+
+    // suponiendo que total_costos ya está calculado arriba
+    const cuota_autorizada = alumnos > 0 ? total_costos / alumnos : 0;
+    document.getElementById("cuota_autorizada").innerText = cuota_autorizada.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      });
+      
 }
+
+
 
 // Inicializar inputs con comportamiento especial
 setupFormattedInput("sueldo");
 setupFormattedInput("csoc");
 setupFormattedInput("aporte_estatal");
+
