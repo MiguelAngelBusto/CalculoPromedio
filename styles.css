@@ -1,3 +1,4 @@
+@media (min-width: 601px) {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -114,7 +115,7 @@ span {
   color: white;
   text-align: center;
 }
-
+}
 @media (max-width: 600px) {
   .container {
     padding: 15px;
