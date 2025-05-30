@@ -135,8 +135,9 @@ span {
   }
 
   .Input {
-    width: 100%;
-    max-width: none;
+    width: 90%;              /* Cambiado de 100% a 90% */
+    max-width: 280px;        /* Límite máximo opcional */
+    margin: 10px auto;       /* Centrado horizontal */
   }
 
   .logo {
@@ -153,4 +154,3 @@ span {
     padding: 15px;
   }
 }
-
