@@ -118,9 +118,11 @@ span {
 @media (max-width: 600px) {
   .container {
     padding: 15px;
-     width: 100vw;
+     width: 100%;
     max-width: 100%;
-    min-height: auto;
+    min-height: auto;}
+    border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   }
 
   .row {
