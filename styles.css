@@ -114,3 +114,43 @@ span {
   color: white;
   text-align: center;
 }
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label, input, span {
+    flex: 1 1 100%;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .Input {
+    width: 100%;
+    max-width: none;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  .titulo {
+    font-size: 1.8em;
+    padding: 0 10px;
+  }
+
+  .footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+}
+
