@@ -1,24 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* ESTILOS PARA PANTALLAS MAYORES A 600px */
 @media (min-width: 601px) {
-body {
+  body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #00a9ec;
   }
-  
+
   .container {
     background: #f5f5f5;
     margin: 0 auto;
     padding: 20px;
     max-width: 800px;
     min-height: 100vh;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
-  
+
   .content {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .row {
     display: flex;
     flex-direction: row;
@@ -26,13 +31,13 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  
+
   label {
     font-weight: 500;
     flex: 1 1 65%;
     min-width: 200px;
   }
-  
+
   input, span {
     flex: 1 1 30%;
     padding: 8px;
@@ -40,87 +45,75 @@ body {
     border-radius: 4px;
     border: 1px solid #ccc;
   }
-  
+
   span {
     background-color: #fff;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    color: black;
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+  .Input {
+    background-color: #fff9c4;
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 80%;
+    max-width: 300px;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 8px;
+  }
 
-.titulo {
-  text-align: center;
-  color: white;
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
-  margin-top: 20px;
-}
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
 
-.container {
-  border-radius: 20px; /* Ajustá el valor según el redondeo que quieras */
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* sombra suave opcional */
-}
+  .logo {
+    height: 120px;
+    margin-bottom: 10px;
+  }
 
-.footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  background-color: #1a1a1a;
-  color: white;
-  font-size: 14px;
-  border-top: 1px solid #444;
-}
+  .titulo {
+    text-align: center;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-top: 20px;
+  }
 
-.footer a {
-  color: #4fc3f7;
-  text-decoration: none;
-}
+  .footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 14px;
+    border-top: 1px solid #444;
+  }
 
-.footer a:hover {
-  text-decoration: underline;
-}
+  .footer a {
+    color: #4fc3f7;
+    text-decoration: none;
+  }
 
-.Input {
-  background-color: #fff9c4; /* Elegí otro si querés */
-  border: 1px solid #ccc;
-  padding: 8px;
-  width: 80%;
-  max-width: 300px;
-  display: block;
-  margin: 10px auto;
-  text-align: center;
-  border-radius: 8px;
-}
-
-span {
-  display: block;
-  text-align: center;
-  margin-top: 5px;
-  color: black; /* o el color de texto que estés usando */
+  .footer a:hover {
+    text-decoration: underline;
+  }
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.logo {
-  height: 120px;
-  margin-bottom: 10px;
-}
-
-.titulo {
-  color: white;
-  text-align: center;
-}
-}
+/* ESTILOS PARA PANTALLAS MENORES O IGUALES A 600px */
 @media (max-width: 600px) {
   .container {
     padding: 15px;
     max-width: 100%;
-    min-height: auto;}
+    min-height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 
   .row {
@@ -130,16 +123,16 @@ span {
 
   label, input, span {
     flex: 1 1 100%;
-    width: 90%;              /* Cambiado de 100% a 90% */
-    max-width: 280px;        /* Límite máximo opcional */
-    margin: 10px auto;   
+    width: 90%;
+    max-width: 280px;
+    margin: 10px auto;
     text-align: left;
   }
 
   .Input {
-    width: 90%;              /* Cambiado de 100% a 90% */
-    max-width: 280px;        /* Límite máximo opcional */
-    margin: 10px auto;       /* Centrado horizontal */
+    width: 90%;
+    max-width: 280px;
+    margin: 10px auto;
   }
 
   .logo {
@@ -149,21 +142,32 @@ span {
   .titulo {
     font-size: 1.8em;
     padding: 0 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Playfair Display', serif;
   }
 
-.footer {
-  width: 100vw; /* 100% del ancho de la pantalla */
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  background-color: #1a1a1a;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  border-top: 1px solid #444;
-}
+  .footer {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+  }
 
+  .footer a {
+    color: #4fc3f7;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
 }
