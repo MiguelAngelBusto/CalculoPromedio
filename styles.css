@@ -99,18 +99,18 @@ span {
 }
 
 .header {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 20px;
 }
 
 .logo {
-  height: 80px; /* Ajustá el tamaño como quieras */
-  display: block;
-  margin: 0 auto;
+  height: 80px;
+  margin-bottom: 10px;
 }
 
 .titulo {
   color: white;
-  font-family: 'Segoe UI', sans-serif;
   text-align: center;
 }
