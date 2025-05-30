@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 /* ESTILOS PARA PANTALLAS MAYORES A 600px */
-@media (max-width: 1600px) {
+@media (max-width: 3800px) {
   body {
     margin: 0;
     font-family: Arial, sans-serif;
