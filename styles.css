@@ -118,6 +118,7 @@ span {
 @media (max-width: 600px) {
   .container {
     padding: 15px;
+     width: 100vw;
     max-width: 100%;
     min-height: auto;
   }
