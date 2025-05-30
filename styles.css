@@ -129,9 +129,10 @@ span {
 
   label, input, span {
     flex: 1 1 100%;
-    width: 100%;
+    width: 90%;              /* Cambiado de 100% a 90% */
+    max-width: 280px;        /* Límite máximo opcional */
+    margin: 10px auto;   
     text-align: left;
-    margin-bottom: 10px;
   }
 
   .Input {
@@ -149,8 +150,19 @@ span {
     padding: 0 10px;
   }
 
-  .footer {
-    font-size: 12px;
-    padding: 15px;
-  }
+.footer {
+  width: 100vw; /* 100% del ancho de la pantalla */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+}
+
 }
