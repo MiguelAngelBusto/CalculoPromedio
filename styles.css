@@ -97,3 +97,20 @@ span {
   margin-top: 5px;
   color: black; /* o el color de texto que estés usando */
 }
+
+.header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo {
+  height: 80px; /* Ajustá el tamaño como quieras */
+  display: block;
+  margin: 0 auto;
+}
+
+.titulo {
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
